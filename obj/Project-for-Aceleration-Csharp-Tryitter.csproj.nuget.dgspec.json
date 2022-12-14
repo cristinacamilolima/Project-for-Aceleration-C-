@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/cristina/ProjetosTrybe-Acc_CSharp/Project-Tryitter/Project-for-Aceleration-Csharp-Tryitter/Project-for-Aceleration-Csharp-Tryitter.csproj": {}
+  },
+  "projects": {
+    "/home/cristina/ProjetosTrybe-Acc_CSharp/Project-Tryitter/Project-for-Aceleration-Csharp-Tryitter/Project-for-Aceleration-Csharp-Tryitter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/cristina/ProjetosTrybe-Acc_CSharp/Project-Tryitter/Project-for-Aceleration-Csharp-Tryitter/Project-for-Aceleration-Csharp-Tryitter.csproj",
+        "projectName": "Project-for-Aceleration-Csharp-Tryitter",
+        "projectPath": "/home/cristina/ProjetosTrybe-Acc_CSharp/Project-Tryitter/Project-for-Aceleration-Csharp-Tryitter/Project-for-Aceleration-Csharp-Tryitter.csproj",
+        "packagesPath": "/home/cristina/.nuget/packages/",
+        "outputPath": "/home/cristina/ProjetosTrybe-Acc_CSharp/Project-Tryitter/Project-for-Aceleration-Csharp-Tryitter/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/cristina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

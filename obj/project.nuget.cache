@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "xDcpll3z7SmgKySRH6hTuRpiIqgBIalbq8FuEP+dJ7YR54XYsU2K6oBGSloby+HCUVkCbglxzETIIIquUMtaTw==",
+  "success": true,
+  "projectFilePath": "/home/cristina/ProjetosTrybe-Acc_CSharp/Project-Tryitter/Project-for-Aceleration-Csharp-Tryitter/Project-for-Aceleration-Csharp-Tryitter.csproj",
+  "expectedPackageFiles": [
+    "/home/cristina/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/cristina/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/cristina/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/cristina/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/cristina/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/cristina/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
