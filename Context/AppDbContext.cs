@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Primitives;
 using Project_for_Aceleration_Csharp_Tryitter.Models;
+using Project_for_Aceleration_Csharp_Tryitter.Utils;
 using System;
 
 namespace Project_for_Aceleration_Csharp_Tryitter.Context
@@ -16,6 +17,15 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Context
         }
         public User? GetUser(string email)
         {
+            return Users!.AsNoTracking().FirstOrDefault(user => user.Email == email);
+        }
+
+        public User? GetUser(StringValues token)
+        {
+            var claims = Token.GetTokenClaims(token);
+
+            var email = claims.Claims.ElementAt(0).Value;
+
             return Users!.AsNoTracking().FirstOrDefault(user => user.Email == email);
         }
 

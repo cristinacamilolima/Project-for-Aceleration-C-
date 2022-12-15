@@ -7,6 +7,7 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Models
     {
         [Key]
         public Guid CourseId { get; set; }
-        public string Name { get; set; }        
+        public string Name { get; set; }
+        
     }
 }
