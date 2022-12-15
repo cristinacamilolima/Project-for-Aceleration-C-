@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tgAz96ZDpKge7aE+KwcywHuMBB2ehWI8qSyUDZFYdne3Zm2ndd6Gg5phSwA7BRkm/VLLP+LNSWxxbR8uQ6UxUA==",
+  "dgSpecHash": "gpL9Po3kEyDl5S77yucyyTLQ9SWAgUScvgJUPciqoCOrIqwDAI2XHLXRPVD0/8ytu+ORTa9f32HWRkQbA9CWXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\paulolima\\source\\repos\\Project-for-Aceleration-Csharp-Tryitter\\Project-for-Aceleration-Csharp-Tryitter.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\paulolima\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\paulolima\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\paulolima\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\paulolima\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.11\\microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
     "C:\\Users\\paulolima\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\paulolima\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\paulolima\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
