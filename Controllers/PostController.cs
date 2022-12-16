@@ -75,6 +75,42 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Controllers
             return Ok(post);
         }
 
+        [HttpPut("{id:Guid}")]
+        public ActionResult Put(Guid id, Post post)
+        {
+            Request.Headers.TryGetValue("Authorization", out var bearerToken);
 
+            var user = _context.GetUser(bearerToken)!;
+            var postData = _context.Posts!.FirstOrDefault(p => p.PostId == id)!;
+
+            if (id != postData.PostId)
+                return BadRequest("Post not found.");
+
+            if (postData.UserId != user.UserId)
+                return BadRequest("Not Authorized.");
+
+            postData.Title = post.Title;
+            postData.Content = post.Content;
+            postData.ImageUrl = post.ImageUrl;
+
+            _context.Entry(post).State = EntityState.Modified;
+            _context.SaveChanges();
+
+            return Ok(post);
+        }
+
+        [HttpDelete("{id:Guid}")]
+        public ActionResult Delete(Guid id)
+        {
+            var post = _context.Posts!.FirstOrDefault(post => post.PostId == id);
+
+            if (post is null)
+                return NotFound("Post not found.");
+
+            _context.Posts!.Remove(post);
+            _context.SaveChanges();
+
+            return Ok();
+        }
     }
 }
