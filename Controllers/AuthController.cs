@@ -49,6 +49,8 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Controllers
             _context.Users!.Add(userModel);
             _context.SaveChanges();
 
+            user.id = userModel.UserId;
+
             var result = new CreatedAtRouteResult("GetUser",
                 new { id = userModel.UserId }, user);            
 
