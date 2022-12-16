@@ -50,9 +50,7 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Controllers
             _context.SaveChanges();
 
             var result = new CreatedAtRouteResult("GetUser",
-                new { id = userModel.UserId }, user);
-
-            user.id = userModel.UserId;
+                new { id = userModel.UserId }, user);            
 
             return result;
         }
