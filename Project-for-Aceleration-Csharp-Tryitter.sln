@@ -5,8 +5,6 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project-for-Aceleration-Csharp-Tryitter", "Project-for-Aceleration-Csharp-Tryitter.csproj", "{80C59739-C64B-456F-8A7A-AE4FBCACD554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "..\WebApplication1\WebApplication1.csproj", "{84E0771F-E06C-46DA-9B32-47C8DB0A6BBB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{80C59739-C64B-456F-8A7A-AE4FBCACD554}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80C59739-C64B-456F-8A7A-AE4FBCACD554}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80C59739-C64B-456F-8A7A-AE4FBCACD554}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84E0771F-E06C-46DA-9B32-47C8DB0A6BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84E0771F-E06C-46DA-9B32-47C8DB0A6BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84E0771F-E06C-46DA-9B32-47C8DB0A6BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84E0771F-E06C-46DA-9B32-47C8DB0A6BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -24,7 +24,7 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Controllers
             if (!Validate.Validate.ValidateEmail(user.Email!))
                 return BadRequest("The email is invalid");
 
-            var exist = _context.Users!.FirstOrDefault(user => user.Email == user.Email);
+            var exist = _context.Users!.FirstOrDefault(userData => userData.Email == user.Email);
             if (exist != null)
                 return BadRequest("The email is already registered");
 

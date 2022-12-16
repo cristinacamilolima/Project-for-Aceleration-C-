@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Project_for_Aceleration_Csharp_Tryitter.Context;
@@ -79,6 +80,10 @@ builder.Services
         .Build());
 });
 
+string conn = @"Server=localhost;Database=TryitterDB;User=SA;Password=password123!;trustservercertificate=true";
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+options.UseSqlServer(conn));
 
 builder.Services.AddCors();
 
