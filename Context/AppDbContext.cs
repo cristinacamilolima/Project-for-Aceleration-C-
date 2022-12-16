@@ -10,6 +10,7 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Context
     {
         public DbSet<Post>? Posts { get; set; }
         public DbSet<User>? Users { get; set; }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public User? GetUser(Guid id)
         {
