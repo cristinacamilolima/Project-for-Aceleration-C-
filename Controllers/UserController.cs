@@ -56,5 +56,26 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Controllers
 
             return NotFound("User not found.");
         }
+
+        [HttpPut("{id:Guid}", Name = "Update To Admin")]
+        [Authorize(Policy = "TryitterAdministrators")]
+        public ActionResult UpdateByAdmin(Guid id, UserDTO user)
+        {
+            var userData = _context.GetUser(id);
+            if (!Validate.Validate.ValidateUser(userData))
+                return BadRequest("User not found.");
+
+            userData.UserId = id;
+            userData.Name = user.Name;
+            userData.Email = user.Email;
+            userData.Password = user.Password;
+            userData.Admin = user.Admin;
+
+            _context.Entry(userData).State = EntityState.Modified;
+            _context.SaveChanges();
+
+            return Ok(userData);
+        }
+
     }
 }
