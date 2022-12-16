@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project_for_Aceleration_Csharp_Tryitter.Context;
 using Project_for_Aceleration_Csharp_Tryitter.DTO;
+using System.Security.Claims;
 
 namespace Project_for_Aceleration_Csharp_Tryitter.Controllers
 {
@@ -75,6 +76,53 @@ namespace Project_for_Aceleration_Csharp_Tryitter.Controllers
             _context.SaveChanges();
 
             return Ok(userData);
+        }
+
+        [HttpPut]
+        public ActionResult UpdateByUser(UserDTO user)
+        {
+            var claims = HttpContext.User.Identity as ClaimsIdentity;
+            var email = claims.Claims.FirstOrDefault(c => c.Type == "Email")!.Value;
+            var userData = _context.GetUser(email);
+
+            userData.Email = user.Email;
+            userData.Name = user.Name;
+            userData.Password = user.Password;
+
+            _context.Entry(userData).State = EntityState.Modified;
+            _context.SaveChanges();
+
+            return Ok();
+        }
+
+        [HttpDelete("{id:Guid}", Name = "Delete Admin")]
+        [Authorize(Policy = "TryitterAdministrators")]
+        public ActionResult DeleteByAdmin(Guid id)
+        {
+            var user = _context.Users!.FirstOrDefault(user => user.UserId == id);
+            if (user is null)
+                return NotFound("User not found.");
+
+            _context.Users!.Remove(user);
+            _context.SaveChanges();
+
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public ActionResult DeleteByUser()
+        {
+            var claims = HttpContext.User.Identity as ClaimsIdentity;
+            var email = claims.Claims.FirstOrDefault(c => c.Type == "Email")!.Value;
+            var user = _context.GetUser(email);
+
+            if (user is null)
+                return NotFound("User not found.");
+
+            _context.Users!.Remove(user);
+            _context.SaveChanges();
+
+            return NoContent();
         }
 
     }
